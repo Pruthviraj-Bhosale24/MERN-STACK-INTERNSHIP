@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+   <div class="container">
+
+    <div class="left-side">
+        <h1>🔐 Secure Login</h1>
+        <p>
+            Welcome Back! Login securely
+            using password or OTP verification.
+        </p>
+    </div>
+
+    <div class="right-side">
+
+        <h1 class="title">Login</h1>
+
+        <input type="text"
+               id="user"
+               class="input-box"
+               placeholder="Enter Username">
+
+        <input type="password"
+               id="pass"
+               class="input-box"
+               placeholder="Enter Password">
+
+        <button class="btn"onclick="getClick()">LOGIN</button>
+
+        <h3 id="result" class="result"></h3>
+
+    </div>
+
+</div>
+    
+ 
+    <script>
+        let user=document.getElementById("user");
+        let pass=document.getElementById("pass");
+        let result= document.getElementById("result")
+        var attempts = 3;
+
+        let username = "admin";
+        let password = "admin@123";
+
+        
+        function getClick() {
+            if(username==user.value && password==pass.value){
+            
+                result.innerHTML="Login Succesful"
+            }
+
+           else{
+    
+            if(attempts==0){
+                result.innerHTML="System lock for 15  Minutes !!! Try Later!!"
+            }
+            else{
+                result.innerHTML=`<a href="Otp_page.html">Try Another Way!!! CLick Here</a>`
+            }
+        }
+        }
+    </script>
+</body>
+</html>

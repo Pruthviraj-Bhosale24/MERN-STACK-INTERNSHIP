@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+
+      <div class="container">
+
+    <div class="left-side">
+        <h1>📱 OTP Verification</h1>
+
+        <p>
+            Verify your identity using
+            one-time password authentication.
+        </p>
+    </div>
+
+    <div class="right-side">
+
+        <h1 class="title">Verify OTP</h1>
+
+        <input type="number"
+               id="mobile"
+               class="input-box"
+               placeholder="Enter Mobile Number">
+
+        <button class="btn"
+                onclick="sendOTP()">Send OTP</button>
+
+        <input type="number"id="U_OTP" class="input-box"placeholder="Enter OTP">
+
+        <button class="btn"onclick="verifyOTP()">Verify OTP</button>
+
+        <h3 id="result" class="result"></h3>
+
+        <p id="timer"></p>
+
+    </div>
+
+</div>
+<script>
+            let otp;
+            let otpTime;
+            let result = document.getElementById("result");
+
+    function sendOTP(){
+
+            otp = Math.floor(1000 + Math.random() * 9000);
+
+            otpTime = new Date().getTime();
+
+            alert("Your OTP is: " + otp);
+
+            result.innerHTML = "OTP Sent Successfully";
+        }
+
+    function verifyOTP(){
+
+            let enteredOTP =document.getElementById("U_OTP").value;
+
+            let currentTime =new Date().getTime();
+
+            let timeDiff =(currentTime - otpTime) / 1000;
+
+            if(timeDiff > 60){
+
+                result.innerHTML ="OTP Expired!!! <br>  Generate New OTP";
+            }
+            else if(enteredOTP == otp){
+
+                result.innerHTML ="OTP Verified Successfully";
+            }
+            else{
+
+                result.innerHTML =
+                "Invalid OTP!";
+            }
+    }
+
+</script>
+
+</body>
+</html>

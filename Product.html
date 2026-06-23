@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Store</title>
+
+<style>
+
+body{
+    background:#FFFAF3;
+    font-family: Arial;
+}
+
+#head{
+    text-align:center;
+    margin-bottom:20px;
+    
+}
+
+button{
+    display:block;
+    margin:0 auto 30px;
+    padding:12px 25px;
+    background:#0a1718;
+    color:white;
+    border-radius:8px;
+    font-size:16px;
+}
+
+#container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    width:280px;
+    background:#FFE5BF;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+
+.card img{
+    width:100%;
+    height:200px;
+    
+}
+
+.details{
+    padding:15px;
+}
+
+.details h2{
+    color:#222;
+    margin-bottom:8px;
+}
+
+.details h3{
+    color:gray;
+    margin-bottom:8px;
+}
+
+.details h4{
+    color:green;
+}
+
+</style>
+</head>
+<body>
+
+<div class="head">
+<h1 id="head">Tech Store</h1>
+
+<button onclick="showProducts()">Show Products</button>
+</div>
+<div id="container"></div>
+
+
+<script>
+
+let products = [
+
+{
+    pname: "Gaming Keyboard",
+    cname: "Redragon",
+    price: 2999,
+    img: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500"
+},
+
+{
+    pname: "Gaming Mouse",
+    cname: "Logitech",
+    price: 1499,
+    img: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500"
+},
+
+{
+    pname: "Monitor",
+    cname: "Samsung",
+    price: 12999,
+    img: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500"
+},
+
+{
+    pname: "Headphones",
+    cname: "JBL",
+    price: 2499,
+    img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+},
+
+{
+    pname: "SSD",
+    cname: "Western Digital",
+    price: 3999,
+    img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500"
+},
+
+{
+    pname: "Webcam",
+    cname: "HP",
+    price: 1999,
+    img: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500"
+}
+
+];
+
+function showProducts(){
+
+    let container = document.getElementById("container");
+
+    container.innerHTML = "";
+
+    products.forEach((product)=>{
+
+        container.innerHTML += `
+        
+        <div class="card">
+
+            <img src="${product.img}" alt="${product.pname}">
+
+            <div class="details">
+                <h2>${product.pname}</h2>
+                <h3>${product.cname}</h3>
+                <h4>₹${product.price}</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+
+        `;
+    });
+
+}
+</script>
+
+</body>
+</html>
