@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+}
+
+.canvas{
+    width:400px;
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:rotate(45deg);
+}
+
+.square{
+    width:90%;
+    height:90%;
+    border:2px solid wheat;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:spin 20s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="canvas">
+    <div class="square">
+        <div class="square">
+            <div class="square">
+                <div class="square">
+                    <div class="square">
+                        <div class="square">
+                            <div class="square"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

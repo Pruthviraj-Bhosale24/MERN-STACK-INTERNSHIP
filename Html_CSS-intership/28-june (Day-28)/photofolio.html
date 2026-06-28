@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhotoFolio</title>
+    
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+body{
+    background-color: black;
+    
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#0b0b0b;
+}
+.name{
+    font-size:32px;
+    font-weight:bold;
+}
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+}
+.social{
+    display:flex;
+    gap:15px;
+}
+
+.social i{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+}
+
+.content{
+    text-align:center;
+    padding-top:180px;
+    padding-bottom:80px;
+}
+
+.content h1{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.name i{
+    color: green;
+}
+.content h1 span{
+    color:#00ff88;
+}
+.content h2{
+    font-size:65px;
+    margin-bottom:25px;
+}
+.content p{
+    font-size:20px;
+    color:#cfcfcf;
+    margin-bottom:30px;
+}
+
+.content button{
+    height: 50px;
+    width: 150px;
+    background:greenyellow;
+    color:black;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+
+.photos{
+    width:90%;
+
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    padding-bottom:50px;
+}
+
+.box{
+
+    display: flex;
+    height:220px;
+    width: 300px;
+    border-radius:10px;
+    
+}
+
+.box img{
+    height:220px;
+    width: 300px;
+    border-radius:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="name">
+        <h3><i class="fa-regular fa-camera"></i>PhotoFolio</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+    </div>
+</nav>
+
+<div class="content">
+
+    <h1>I'm <span>Jenny Wilson</span></h1>
+
+    <h2>Professional Photographer</h2>
+
+    <p>Capturing beautiful moments through creative photography.</p>
+
+    <button>Hire Me</button>
+
+</div>
+
+
+<div class="photos">
+
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8T5z9D8qHvqSXFE2Q-8tNd-m8K6DLS9WyxIOD2e5oww&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq1kXgDTmSyYhVHPZ42AjDT9uYTRweMPzxFmHK9yKRIg&s=10" alt=""></div>
+    <div class="box"><img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/free-nature-wallpaper-colorful-blooming-meadow-in-the-mountains-after-sunset-free-image.jpg?resize=525%2C300&ssl=1" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjmw6nNhZyJc8bIUARKXeukubKqVTtGN9g3HxLTlh_VQ&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmSbn7p1clYikCWPqTdGw0m00_K0vKjUUdKBQSbBZnwQ&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQHsSrVC2pdJY8iN2suGn-kyI7Gmu6Uc33CEj6d0_4A&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKMfxcph2LZ5abKQ-wb6ggLXGKOtkMIRAYMDVo3zZbuA&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYqFrk5lnyFon2PNMCJVVUO-JiojHzS9es0S5zJvxqQg&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiPGu1YGscZbDNUqJYXHj7wKN9BRKPTi5rgwlhSJpyw&s=10" alt=""></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15GqtF6w8QjyMwVtBnN8l4x-sVMdFdbAHJ-26aKY3Ag&s=10" alt=""></div>
+
+    
+
+</div>
+
+</body>
+</html>

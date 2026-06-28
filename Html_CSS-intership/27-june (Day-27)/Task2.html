@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Emoji</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f2f2f2;
+}
+
+.face{
+    width:250px;
+    height:250px;
+    background:yellow;
+    border-radius:50%;
+    position:relative;
+    transition:.5s;
+}
+
+.face:hover{
+    transform:scale(1.1);
+}
+
+.eye{
+    width:50px;
+    height:50px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:70px;
+    overflow:hidden;
+}
+
+.left-eye{
+    left:50px;
+}
+
+.right-eye{
+    right:50px;
+}
+
+.pupil{
+    width:18px;
+    height:18px;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    top:16px;
+    left:16px;
+    transition:.4s;
+}
+
+.face:hover .pupil{
+    transform:translate(8px, 0);
+}
+
+.mouth{
+    width:90px;
+    height:50px;
+    background:#d9534f;
+    position:absolute;
+    bottom:50px;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:0 0 50px 50px;
+    overflow:hidden;
+    transition:.5s;
+}
+
+.teeth{
+    width:100%;
+    height:15px;
+    background:white;
+}
+
+
+
+.face:hover .mouth{
+    width:110px;
+    height:70px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="face">
+
+    <div class="eye left-eye">
+        <div class="pupil"></div>
+    </div>
+
+    <div class="eye right-eye">
+        <div class="pupil"></div>
+    </div>
+
+    <div class="mouth">
+        <div class="teeth"></div>
+        
+    </div>
+
+</div>
+
+</body>
+</html>
