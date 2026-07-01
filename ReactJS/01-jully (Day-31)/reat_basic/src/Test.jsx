@@ -6,8 +6,7 @@ export default function Test(){
         <h1>Addition: {a+b}</h1>
         <h1>Subtraction: {a-b}</h1>
         <h1>Multilication: {a*b}</h1>
-        <input type="text" placeholder="Enter name:" />
-
-
+        <input type="text" placeholder="Enter name:"/>
+        
     </div>
 }
